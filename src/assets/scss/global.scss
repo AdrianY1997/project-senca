@@ -1,0 +1,17 @@
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-body: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-body: 0, 0, 0;
+    --background-end: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: var(--background-body);
+}

@@ -1,0 +1,77 @@
+.navbar > p,
+.navbar > a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  padding: 1rem;
+  padding-right: 0;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.navbar > p span,
+.navbar > a span {
+  transition: 0.5s;
+}
+
+.navbar > p::before,
+.navbar > a::before {
+  content: "";
+  position: absolute;
+
+  background-color: transparent;
+  bottom: -50px;
+  right: 0;
+  height: 50px;
+  width: 10px;
+  border-top-right-radius: 10px;
+}
+
+.navbar > p::after,
+.navbar > a::after {
+  content: "";
+  position: absolute;
+
+  background-color: transparent;
+  top: -50px;
+  right: 0;
+  height: 50px;
+  width: 10px;
+  border-top-right-radius: 10px;
+  transform: scaleY(-1);
+}
+
+.navbar i {
+  display: flex;
+}
+
+.navbar > p:hover i,
+.navbar > a:hover i {
+  animation: shake 0.5s 1;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+
+  30%,
+  60% {
+    transform: translate3d(2px, 0, 0);
+  }
+}
