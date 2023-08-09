@@ -55,12 +55,12 @@ export default function NavButtons({ }) {
     return (
         <>
             <p></p>
-            {buttons.map(b => b.link ? (
+            {buttons.map((b, i) => b.link ? (
                 <Link
-                    key={b.link}
+                    key={i}
                     href={b.link}
                     prefetch
-                    className={`${path == b.link && 'bg-gray-100 text-senca before:shadow-[0_-10px_0_0_white] after:shadow-[0_-10px_0_0_white]'}`}
+                    className={`${path == b.link && 'bg-gray-100 text-senca before:shadow-[0_-10px_0_0_whitesmoke] after:shadow-[0_-10px_0_0_whitesmoke]'}`}
                 >
                     {path == b.link
                         ? <i style={{ animation: "none" }}>{b.icon}</i>
@@ -68,7 +68,7 @@ export default function NavButtons({ }) {
                     <span className={`capitalize overflow-hidden max-w-[100px] ${menuIsCollapsed ? 'w-0' : 'w-[100px]'}`}>{b.text}</span>
                 </Link>
             ) : (
-                <p onClick={b.onclick}>
+                <p key={i} onClick={b.onclick}>
                     <i>
                         {b.icon}
                     </i>

@@ -1,5 +1,5 @@
-.navbar > p,
-.navbar > a {
+.navbar>p,
+.navbar>a {
   height: 100%;
   display: flex;
   align-items: center;
@@ -12,13 +12,13 @@
   position: relative;
 }
 
-.navbar > p span,
-.navbar > a span {
+.navbar>p span,
+.navbar>a span {
   transition: 0.5s;
 }
 
-.navbar > p::before,
-.navbar > a::before {
+.navbar>p::before,
+.navbar>a::before {
   content: "";
   position: absolute;
 
@@ -30,8 +30,8 @@
   border-top-right-radius: 10px;
 }
 
-.navbar > p::after,
-.navbar > a::after {
+.navbar>p::after,
+.navbar>a::after {
   content: "";
   position: absolute;
 
@@ -48,12 +48,13 @@
   display: flex;
 }
 
-.navbar > p:hover i,
-.navbar > a:hover i {
+.navbar>p:hover i,
+.navbar>a:hover i {
   animation: shake 0.5s 1;
 }
 
 @keyframes shake {
+
   10%,
   90% {
     transform: translate3d(-1px, 0, 0);
@@ -74,4 +75,8 @@
   60% {
     transform: translate3d(2px, 0, 0);
   }
+}
+
+.tabList:first-child {
+  background-color: black;
 }

@@ -4,6 +4,7 @@ import Header from '@/component/header/header'
 import SenaDate from '@/component/senaDate'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { Providers } from './providers'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,13 +22,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-gray-100 2xl:container">
-        <div className="relative min-h-screen">
-          <SenaDate />
-          <Header />
-          <main>
-            {children}
-          </main>
-        </div>
+        <Providers>
+          <div className="relative min-h-screen">
+            <SenaDate />
+            <Header />
+            <main>
+              {children}
+            </main>
+          </div>
+        </Providers>
       </body>
     </html>
   )
