@@ -1,0 +1,32 @@
+.categories {}
+
+.container * {
+    --transition-time: .2s;
+    transition: var(--transition-time) linear;
+}
+
+.container:hover .content {
+    transform: translateY(-6rem);
+}
+
+.details {
+    height: 0%;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.container:hover .details {
+    height: 8rem;
+    opacity: 1;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        display: block;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

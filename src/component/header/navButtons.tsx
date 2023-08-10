@@ -22,8 +22,8 @@ export default function NavButtons({ }) {
             icon: <Icon icon={faHome} size={1.5} />,
         },
         {
-            link: '/categories',
-            text: 'categorías',
+            link: '/library',
+            text: 'librería',
             icon: <Icon icon={faBook} size={1.5} />,
         },
         {

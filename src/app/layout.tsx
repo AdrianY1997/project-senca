@@ -22,15 +22,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-gray-100 2xl:container">
-        <Providers>
-          <div className="relative min-h-screen">
-            <SenaDate />
-            <Header />
-            <main>
-              {children}
-            </main>
-          </div>
-        </Providers>
+        <div className="relative h-screen">
+          <SenaDate />
+          <Header />
+          <main>
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   )
