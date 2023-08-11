@@ -844,12 +844,16 @@ video {
   margin-right: 0.5rem;
 }
 
+.ms-4 {
+  margin-inline-start: 1rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
 
-.ms-4 {
-  margin-inline-start: 1rem;
+.ms-52 {
+  margin-inline-start: 13rem;
 }
 
 .box-border {
@@ -1041,6 +1045,10 @@ video {
   min-height: var(--nextui-spacing-unit-8);
 }
 
+.min-h-\[550px\] {
+  min-height: 550px;
+}
+
 .w-0 {
   width: 0px;
 }
@@ -1156,6 +1164,11 @@ video {
 
 .w-unit-8 {
   width: var(--nextui-spacing-unit-8);
+}
+
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .min-w-\[200px\] {
@@ -1642,10 +1655,6 @@ video {
   overflow: visible;
 }
 
-.overflow-scroll {
-  overflow: scroll;
-}
-
 .overflow-x-auto {
   overflow-x: auto;
 }
@@ -1882,6 +1891,11 @@ video {
   border-color: hsl(var(--nextui-secondary) / var(--nextui-secondary-opacity, var(--tw-border-opacity)));
 }
 
+.border-senca {
+  --tw-border-opacity: 1;
+  border-color: rgb(77 141 54 / var(--tw-border-opacity));
+}
+
 .border-success {
   --tw-border-opacity: 1;
   border-color: hsl(var(--nextui-success) / var(--nextui-success-opacity, var(--tw-border-opacity)));
@@ -1894,11 +1908,6 @@ video {
 .border-warning {
   --tw-border-opacity: 1;
   border-color: hsl(var(--nextui-warning) / var(--nextui-warning-opacity, var(--tw-border-opacity)));
-}
-
-.border-senca {
-  --tw-border-opacity: 1;
-  border-color: rgb(77 141 54 / var(--tw-border-opacity));
 }
 
 .border-b-current {
@@ -1954,6 +1963,11 @@ video {
 
 .\!bg-transparent {
   background-color: transparent !important;
+}
+
+.bg-\[whitesmoke\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
 }
 
 .bg-\[whitesmoke\]\/90 {
@@ -2367,6 +2381,10 @@ video {
   padding-inline-start: 0.5rem;
 }
 
+.ps-4 {
+  padding-inline-start: 1rem;
+}
+
 .pt-1 {
   padding-top: 0.25rem;
 }
@@ -2391,8 +2409,8 @@ video {
   padding-top: 1.5rem;
 }
 
-.ps-4 {
-  padding-inline-start: 1rem;
+.ps-52 {
+  padding-inline-start: 13rem;
 }
 
 .text-left {
@@ -2961,6 +2979,10 @@ video {
   transition-duration: 500ms !important;
 }
 
+.duration-200 {
+  transition-duration: 200ms;
+}
+
 .\!ease-\[cubic-bezier\(0\2c 0\2c 0\.2\2c 1\)\] {
   transition-timing-function: cubic-bezier(0,0,0.2,1) !important;
 }
@@ -2975,6 +2997,10 @@ video {
 
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .will-change-auto {

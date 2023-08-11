@@ -41,7 +41,7 @@ export default function DevelopmentPage({ }) {
         <>
             <div className="section flex">
                 <Categories />
-                <div className="flex flex-col gap-8 pt-4 ms-4 border-s-1 border-senca ps-4">
+                <div className="flex flex-col gap-8 pt-4 ms-4 border-s-1 border-senca ps-4 ms-52">
                     {links && links.map((b, i) => (
                         <div key={i} className="flex gap-4 items-center">
                             <div className='bg-white p-1 w-16 h-16 rounded-lg shadow-sm'>
