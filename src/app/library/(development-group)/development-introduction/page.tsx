@@ -20,7 +20,7 @@ export default function DevelopmentIntroductionPage({ }) {
                         Antes de sumergirnos en el mundo del código, es crucial comprender el concepto de algoritmo. Un algoritmo es un conjunto ordenado de pasos que describe cómo realizar una tarea específica. Imagina que estás siguiendo una receta para cocinar tu plato favorito; en esencia, estás siguiendo un algoritmo. En la programación, los algoritmos son la base sobre la cual se construyen las soluciones a problemas.
                     </p>
                     <p>
-                        La lógica es otro pilar fundamental en la programación. Define cómo se toman decisiones y se ejecutan acciones en función de condiciones particulares. Los operadores lógicos, como "AND", "OR" y "NOT", son herramientas esenciales para construir declaraciones condicionales que guían el flujo del programa. La capacidad de diseñar algoritmos lógicos eficientes es crucial para resolver problemas de manera efectiva y optimizar el rendimiento de tus programas.
+                        La lógica es otro pilar fundamental en la programación. Define cómo se toman decisiones y se ejecutan acciones en función de condiciones particulares. Los operadores lógicos, como &quot;AND&quot;, &quot;OR&quot; y &quot;NOT&quot;, son herramientas esenciales para construir declaraciones condicionales que guían el flujo del programa. La capacidad de diseñar algoritmos lógicos eficientes es crucial para resolver problemas de manera efectiva y optimizar el rendimiento de tus programas.
                     </p>
                 </div>
                 <div>
