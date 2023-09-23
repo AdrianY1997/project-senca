@@ -15,11 +15,13 @@ export default function SenaDate() {
 
     return (
         <>
-            <div className="absolute right-0 top-0 p-4">
-                <div className="bg-senca p-1 rounded-xl">
-                    <LogoSena className="fill-white" />
+            <div className="fixed container">
+                <div className="p-4 absolute right-0 w-fit">
+                    <div className="bg-senca p-1 rounded-xl">
+                        <LogoSena className="fill-white" />
+                    </div>
+                    <p className="text-center text-senca uppercase font-bold text-xs">{currentDate}</p>
                 </div>
-                <p className="text-center text-senca uppercase font-bold text-xs">{currentDate}</p>
             </div>
         </>
     )

@@ -1,3 +1,5 @@
+"use client"
+
 import devImg from '@/assets/img/library/development.png';
 import langImg from '@/assets/img/library/languages.png';
 import mathImg from '@/assets/img/library/maths.png';
@@ -9,6 +11,7 @@ import Image from "next/image";
 import Link from 'next/link';
 import Icon from '../general/icon';
 import { faCaretDown, faCaretUp, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
 
 export default function Categories({ }) {
     const categories = [
@@ -32,13 +35,13 @@ export default function Categories({ }) {
         },
         {
             link: "/library/eco",
-            img: mathImg,
+            img: ecoImg,
             title: "Energías renovables",
             details: "TEMPLATE"
         },
         {
             link: "/library/graphics",
-            img: mathImg,
+            img: grapImg,
             title: "Diseño gráfico",
             details: "TEMPLATE"
         },
@@ -49,32 +52,46 @@ export default function Categories({ }) {
             details: "TEMPLATE"
         }
     ]
+    const [offSet, setOffSet] = useState(0);
+
+    const handleScrollCategories = (n: number) => {
+        let tmpOffSet = offSet + n;
+
+        if (tmpOffSet > 5 || tmpOffSet < 0) {
+            return;
+        };
+
+        setOffSet(tmpOffSet);
+    }
 
     return (
         <>
-            <div className={style.categories + ` w-min flex flex-col gap-12 py-12 relative h-[100vh] -my-4 overflow-hidden`}>
-                <span className='absolute top-0 w-full flex justify-center pt-4 py-2 bg-[whitesmoke]/90 shadow-[0_0_20px_5px_whitesmoke] z-10 cursor-pointer'>
+            <div className={style.categories + ` w-min py-12 h-[100vh] -my-4 overflow-hidden fixed`}>
+                <span onClick={() => handleScrollCategories(-1)} className='absolute top-0 w-full flex justify-center pt-4 py-2 bg-[whitesmoke]/90 shadow-[0_0_20px_5px_whitesmoke] z-10 cursor-pointer'>
                     <Icon icon={faChevronUp} />
                 </span>
-                <span className='absolute bottom-0 w-full flex justify-center pb-4 py-2 bg-[whitesmoke]/90 shadow-[0_0_20px_5px_whitesmoke] z-10 cursor-pointer'>
+                <span onClick={() => handleScrollCategories(1)} className='absolute bottom-0 w-full flex justify-center pb-4 py-2 bg-[whitesmoke]/90 shadow-[0_0_20px_5px_whitesmoke] z-10 cursor-pointer'>
                     <Icon icon={faChevronDown} />
                 </span>
-                {categories && categories.map((e, i) => (
-                    <Link href={e.link} key={i} className={style.container}>
-                        <div className={`border-transparent border-1 rounded-md bg-white hover:border-senca shadow-sm relative pb-8 cursor-pointer`}>
-                            <div className={style.content}>
-                                <div className='w-48 h-36 p-12 pb-1'>
-                                    <Image className='w-full h-full' src={e.img} priority alt=""></Image>
-                                </div>
-                                <div className='text-center'>
-                                    <p className='font-bold capitalize'>{e.title}</p>
-                                    <p className={style.details + " w-100 absolute text-xs"}>{e.details}</p>
+                <div className={`flex flex-col gap-12 ease-in-out duration-200`} style={{
+                    transform: `translateY(calc(-${offSet} * 16rem))`
+                }}>
+                    {categories && categories.map((e, i) => (
+                        <Link href={e.link} key={i} className={style.container}>
+                            <div className={`border-transparent border-1 rounded-md bg-white hover:border-senca shadow-sm relative pb-8 cursor-pointer`}>
+                                <div className={style.content}>
+                                    <div className='w-48 h-36 p-12 pb-1'>
+                                        <Image className='w-full h-full' src={e.img} priority alt=""></Image>
+                                    </div>
+                                    <div className='text-center'>
+                                        <p className='font-bold capitalize'>{e.title}</p>
+                                        <p className={style.details + " w-100 absolute text-xs"}>{e.details}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </Link>
-                ))}
-
+                        </Link>
+                    ))}
+                </div>
             </div>
         </>
     )

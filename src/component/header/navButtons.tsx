@@ -60,7 +60,7 @@ export default function NavButtons({ }) {
                     key={i}
                     href={b.link}
                     prefetch
-                    className={`${path == b.link && 'bg-gray-100 text-senca before:shadow-[0_-10px_0_0_whitesmoke] after:shadow-[0_-10px_0_0_whitesmoke]'}`}
+                    className={`${!path.search(b.link) && 'bg-gray-100 text-senca before:shadow-[0_-10px_0_0_whitesmoke] after:shadow-[0_-10px_0_0_whitesmoke]'}`}
                 >
                     {path == b.link
                         ? <i style={{ animation: "none" }}>{b.icon}</i>
